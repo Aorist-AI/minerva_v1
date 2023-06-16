@@ -1,0 +1,14 @@
+ 			     
+opencv-contrib-python	    
+Flask                      
+Flask-SocketIO             
+Flask-SSE                    
+firebase                     
+firebase-admin               
+Pyrebase		               
+customtkinter		 
+playsound	 	
+requests 
+ultralytics
+mediapipe
+gunicorn	
