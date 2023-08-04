@@ -20,7 +20,7 @@ def createstartwindow():
 
             # Do something with the entered name
             Id = randint(0, 100)
-            with open("users.json") as json_file:
+            with open("ymlandjson_Files/users.json") as json_file:
                 data = json.load(json_file)
 
             username = {
@@ -29,7 +29,7 @@ def createstartwindow():
             }
             data[Id] = username
 
-            with open("users.json", "w") as file:
+            with open("ymlandjson_Files/users.json", "w") as file:
                 json.dump(data, file, indent=4)
             window.destroy()
             camera = cv2.VideoCapture(0)

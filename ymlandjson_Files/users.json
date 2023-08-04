@@ -1,3 +1,18 @@
 {
-    
+    "78": {
+        "name": "manu",
+        "mode": "Allowed"
+    },
+    "42": {
+        "name": "Admin",
+        "mode": "Allowed"
+    },
+    "40": {
+        "name": "root",
+        "mode": "Allowed"
+    },
+    "22": {
+        "name": "superadmin",
+        "mode": "Allowed"
+    }
 }

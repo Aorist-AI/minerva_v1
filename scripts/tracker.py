@@ -11,7 +11,7 @@ import json
 import africastalking
 import random
 
-username='minerva'
+username='PraiseGodwins'
 api_key='5d3cab7e7dbbe73268af85352e547c7de4d7a1b3b51f3a145d9b2c43d1d1f7b1'
 
 africastalking.initialize(username, api_key)
@@ -23,11 +23,9 @@ class send_sms():
     def sending():
         sms = africastalking.SMS
         # Set the numbers in international format
-        recipients = ["+254797853542"]
+        recipients = ["+254742079321"]
         # Set your message
         message = f"there is a criminal please check feed"
-        # Set your shortCode or senderId
-        #sender = "iCar Ltd"
         try:
             response = sms.send(message, recipients)
             print (response)
@@ -156,4 +154,4 @@ def tracker():
 
     trainnerwithpath(screenshot_dir)
 
-# tracker()
+tracker()

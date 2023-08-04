@@ -39,7 +39,8 @@ def detector():
                 b = box.xyxy[0]
                 c = box.cls
                 x, y, w, h = int(b[0]), int(b[1]), int(b[2]), int(b[3])
-                cv.rectangle(image, (x,y), (w, h), (100,0,100), 2)
+                # cv.rectangle(image, (x,y), (w, h), (100,0,100), 2)
+                cv.rectangle(image, (x, y), (x+w, y+h), (100, 0, 100), 2)
                 faceId, mismatch = recognizer.predict(gray[y:y+h, x:x+w])
                 faceId=str(faceId)
                 if mismatch < 50  :
@@ -84,7 +85,8 @@ def detectorcrim():
                 b = box.xyxy[0]
                 c = box.cls
                 x, y, w, h = int(b[0]), int(b[1]), int(b[2]), int(b[3])
-                cv.rectangle(image, (x,y), (w, h), (100,0,100), 2)
+                # cv.rectangle(image, (x,y), (w, h), (100,0,100), 2)
+                cv.rectangle(image, (x, y), (x+w, y+h), (100, 0, 100), 2)
 
                 faceId, mismatch = recognizer.predict(gray[y:y+h, x:x+w])
                 faceId=str(faceId)
@@ -137,7 +139,8 @@ def live_detection():
                     b = box.xyxy[0]
                     c = box.cls
                     x, y, w, h = int(b[0]), int(b[1]), int(b[2]), int(b[3])
-                    cv.rectangle(frame, (x,y), (w, h), (100,0,100), 2)
+                    # cv.rectangle(frame, (x,y), (w, h), (100,0,100), 2)
+                    cv.rectangle(frame, (x, y), (x+w, y+h), (100, 0, 100), 2)
                     faceId, mismatch = recognizer.predict(gray[y:y+h, x:x+w])
                     faceId=str(faceId)
                     if mismatch < 50  :
