@@ -1,7 +1,7 @@
 import cv2 as cv
 from ultralytics import YOLO
 from ultralytics.yolo.utils.plotting import Annotator
-import mediapipe as mp
+# import mediapipe as mp
 import numpy as np
 import os
 from scripts.send_emails import send_emails
