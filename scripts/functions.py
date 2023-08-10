@@ -10,7 +10,7 @@ from random import randint
 import random
 import datetime
 import json
-import pyrebase
+# import pyrebase
 import threading
 from playsound import playsound
 
@@ -35,10 +35,10 @@ firebaseConfig = {
     "measurementId": "G-YW3CEWL44K",
 }
 
-firebase=pyrebase.initialize_app(firebaseConfig)
-storage=firebase.storage()
-database=firebase.database()
-auth = firebase.auth()
+# firebase=pyrebase.initialize_app(firebaseConfig)
+# storage=firebase.storage()
+# database=firebase.database()
+# auth = firebase.auth()
 
 # # open users json file and retrieve names
 with open('ymlandjson_Files/users.json') as jsonFile:
@@ -107,10 +107,10 @@ def uploadphoto():
         'date':str(datetime.datetime.now())
     }
     Id = random.randrange(1, 9999, 5)
-    database.child("omniscience").child(f"unknown{Id}").update(data)
-    storage.child("omniscience").child(f"unknown{Id}.jpg").put("screenShot3.jpg")
+    # database.child("omniscience").child(f"unknown{Id}").update(data)
+    # storage.child("omniscience").child(f"unknown{Id}.jpg").put("screenShot3.jpg")
 
-def create_user(email, password):
-    auth.create_user_with_email_and_password(email, password)
+# def create_user(email, password):
+#     # auth.create_user_with_email_and_password(email, password)
 
 
