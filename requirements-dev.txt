@@ -1,6 +1,7 @@
 africastalking
 customtkinter
 Flask
+medipipe
 numpy
 opencv_python
 Pillow
