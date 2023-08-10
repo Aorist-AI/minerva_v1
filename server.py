@@ -1,5 +1,5 @@
 from flask import Flask,render_template,Response,redirect,request
-from scripts.functions import frameProcess,storage,auth,cv, create_user
+from scripts.functions import frameProcess,cv
 
 # run app and model
 app = Flask(__name__)
@@ -25,10 +25,10 @@ def login():
 
 @app.route('/' , methods=['POST'])
 def checklog():
-    email=request.form["email"]
-    password=request.form["password"]
+    # email=request.form["email"]
+    # password=request.form["password"]
     try:
-        user = auth.sign_in_with_email_and_password(email, password)
+        # user = auth.sign_in_with_email_and_password(email, password)
         return redirect("/home")
     except Exception:
         return render_template('login.html', message='Login failed' , custom_css='static\css\login.css')
@@ -45,9 +45,9 @@ def close():
 
 @app.route("/detections")
 def detections():
-    all_files=storage.child("omniscience").list_files()
-    imgs = [file for file in all_files if file.name.endswith('.jpg') or file.name.endswith('.png')]
-    links = [storage.child(file.name).get_url(None) for file in imgs]
+    # # all_files=storage.child("omniscience").list_files()
+    # imgs = [file for file in all_files if file.name.endswith('.jpg') or file.name.endswith('.png')]
+    # links = [storage.child(file.name).get_url(None) for file in imgs]
     return render_template('detections2.html',images=links ,custom_css='static\css\detections2.css', title=" Detection",icon="static\img\icon.png")
 
 @app.route('/video')
